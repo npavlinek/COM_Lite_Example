@@ -1,0 +1,7 @@
+import "unknwn.idl";
+
+[object, uuid(0e18b4ce-e30c-4098-9ae4-61d9b184bbea)]
+interface IThing : IUnknown
+{
+	HRESULT Hello();
+};

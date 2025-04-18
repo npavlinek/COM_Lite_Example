@@ -1,0 +1,11 @@
+*.dll
+*.exe
+*.exp
+*.ilk
+*.lib
+*.obj
+*.pdb
+*.swp
+/*_i.c
+/*_p.c
+/dlldata.c
