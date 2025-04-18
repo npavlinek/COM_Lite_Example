@@ -7,7 +7,7 @@ include\Thing.h: src\_Thing_COM.h src\_Thing.h
 	copy src\_Thing_COM.h + src\_Thing.h $@
 
 test\client.exe: test\main.cpp
-	$(CXX) -nologo -W4 -std:c++20 -O2 -Iinclude $(filteri %.cpp,$**) -Fe:$* Thing.lib
+	$(CXX) -nologo -W4 -std:c++20 -EHsc -O2 -Iinclude $(filteri %.cpp,$**) -Fe:$* Thing.lib
 
 src\_Thing_COM.h: src\Thing.idl
 	midl -nologo -W3 -define_guids -header $@ $**
