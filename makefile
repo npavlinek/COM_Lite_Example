@@ -1,4 +1,4 @@
-all: Thing.dll include\Thing.h test\client.exe test\client_c.exe
+all: Thing.dll include\Thing.h test\client.exe test\client_c.exe test\client_cs.exe
 
 Thing.dll: src\Thing.cpp include\Thing.h
 	$(CXX) -nologo -W4 -std:c++20 -O2 -Iinclude $(filteri %.cpp,$**) -LD -Fe:$* ole32.lib
@@ -11,6 +11,9 @@ test\client.exe: test\main.cpp
 
 test\client_c.exe: test\main.c
 	$(CC) -nologo -W4 -O2 -Iinclude $(filteri %.c,$**) -Fe:$* Thing.lib
+
+test\client_cs.exe: test\Program.cs
+	csc -nologo -o $** -out:$@
 
 src\_Thing_COM.h: src\Thing.idl
 	midl -nologo -W3 -define_guids -header $@ $**
