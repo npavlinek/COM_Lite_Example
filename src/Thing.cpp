@@ -1,7 +1,7 @@
+#include <Thing.h>
+
 #include <atomic>
 #include <cstdio>
-
-#include <Thing.h>
 
 class Thing : public IThing
 {

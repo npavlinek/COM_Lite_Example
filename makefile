@@ -19,4 +19,4 @@ src\_Thing_COM.h: src\Thing.idl
 	midl -nologo -W3 -define_guids -header $@ $**
 
 clean:
-	del *.dll *.exp *.lib *.obj dlldata.c Thing_i.c Thing_p.c src\_Thing_COM.h
+	del *.dll *.exp *.lib *.obj dlldata.c Thing_i.c Thing_p.c src\_Thing_COM.h test\*.exe
